@@ -1,0 +1,198 @@
+.game-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/bg-game.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5px 1px;
+  position: relative;
+  border-radius: 12px;
+}
+
+.game-header .icon-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 45px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.game-header .icon-btn img {
+  width: 28px;
+  height: auto;
+  filter: drop-shadow(0 1px 2px black);
+}
+
+.game-timer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #c4843f;
+  filter: drop-shadow(0 1px 2px black);
+}
+
+.game-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.8rem 0;
+  gap: 0.5rem;
+}
+
+.stats-box {
+  background: rgba(0, 0, 0, 0.329);
+  padding: 2px;
+  filter: drop-shadow(0 0.5px 2px black);
+  border-radius: 5px;
+  color: #c4843f;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+}
+
+.board-container {
+  background-image: url('/images/tabuleiro.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #000;
+  width: 100%;
+  max-width: 400px;
+  margin-top: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 3 / 4;
+  border-radius: 25px;
+}
+
+.game-board {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .game-page {
+    background: url('/images/bg-game-desktop.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .game-header {
+    height: 56px;
+    display: flex;
+    margin-left: 10px;
+  }
+
+  .game-stats {
+    margin-left: 10px;
+  }
+
+  .icon-btn img {
+    width: 32px;
+  }
+
+  .game-timer {
+    font-size: 3rem;
+  }
+
+  .stats-box {
+    border: 1px solid;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .board-container {
+    max-width: none;
+    width: 100vw;
+    height: 70vh;
+    background-image: url('/images/tabuleiro-desktop.jpg');
+  }
+
+  .board.easy {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .board.medium {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .board.hard {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+
+}
+
+@media (min-width: 800px) {
+  .card {
+    width: 130px;
+    height: 190px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .game-page {
+    width: 100vw;
+    height: 130vh;
+  }
+
+  .game-header {
+    max-width: 1000px;
+    height: 64px;
+    margin-left: 200px;
+  }
+
+  .game-stats {
+    max-width: 1000px;
+    margin-left: 200px;
+  }
+
+  .stats-box {
+    font-size: 1.1rem;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .board-container {
+    max-width: none;
+    width: 60vw;
+    height: 100vh;
+    background-image: url('/images/tabuleiro-desktop.jpg');
+  }
+
+  .board.easy {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .board.medium {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .board.hard {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .card {
+    width: 120px;
+    height: 160px;
+  }
+}

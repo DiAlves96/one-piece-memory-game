@@ -1,0 +1,124 @@
+.board {
+  display: grid;
+  gap: 0.7rem;
+  width: 100%;
+  margin-left: -10px;
+  justify-content: center;
+  padding: 1rem;
+  grid-template-columns: repeat(4, 70px);
+}
+
+.board.medium {
+  grid-template-columns: repeat(4, 70px);
+}
+
+.board.hard {
+  grid-template-columns: repeat(4, 70px);
+}
+
+.card {
+  width: 80px;
+  height: 110px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.endgame-modal {
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: rgba(0, 0, 0, 0.788);
+  ;
+  color: #c4843f;
+  padding: 5rem;
+  border: 3px solid #c4843f;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+}
+
+.endgame-modal h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.endgame-modal p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+}
+
+.endgame-modal button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #c4843f;
+  background-color: #000;
+  border: 2px solid;
+  cursor: pointer;
+  transition: trasnform 0.3s;
+}
+
+.endgame-modal button:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .board {
+    grid-template-columns: repeat(5, 90px);
+    gap: 1rem;
+    margin-left: 6px;
+  }
+
+  .card {
+    width: 100px;
+    height: 140px;
+  }
+
+  .endgame-modal {
+    padding: 4rem;
+  }
+
+  .endgame-modal h2 {
+    font-size: 2.5rem;
+  }
+
+  .endgame-modal p {
+    font-size: 1.4rem;
+  }
+
+  .endgame-modal button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .board {
+    grid-template-columns: repeat(6, 150px);
+    gap: 1.2rem;
+    margin-left: 30px;
+  }
+
+  .card {
+    width: 110px;
+    height: 150px;
+  }
+
+  .endgame-modal {
+    padding: 5rem;
+  }
+
+  .endgame-modal h2 {
+    font-size: 2.8rem;
+  }
+
+  .endgame-modal p {
+    font-size: 1.5rem;
+  }
+
+  .endgame-modal button {
+    font-size: 1.3rem;
+    padding: 12px 24px;
+  }
+}
