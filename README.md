@@ -4,7 +4,7 @@ Bem-vindo ao **One Piece Memory Game**, um jogo da memória temático desenvolvi
 
 ## Preview
 
-![Preview do Jogo da Memória One Piece](./images/preview.png)
+![Preview do Jogo da Memória One Piece](./public/images/preview.png)
 
 ## Tecnologias Utilizadas
 
