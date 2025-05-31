@@ -172,8 +172,10 @@ body {
   }
 
   .footer {
-    padding: 1.5rem 50rem;
+    padding: 1.5rem 30rem;
     font-size: 1rem;
-    margin-right: 500px;
+    margin-bottom: -50px;
+    margin-left: -50px;
+  
   }
 }
