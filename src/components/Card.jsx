@@ -5,10 +5,10 @@ function Card({ card, isFlipped, onClick }) {
     <div className={`card ${isFlipped ? "flipped" : ""}`} onClick={onClick}>
       <div className="card-inner">
         <div className="card-front">
-          <img src={card.img} alt={card.id} />
+          <img src={`${import.meta.env.BASE_URL}${card.img.replace(/^\/+/, "")}`} alt={card.id} />
         </div>
         <div className="card-back">
-          <img src="/images/cards/card-verso.png" alt="carta virada" />
+          <img src={`${import.meta.env.BASE_URL}images/cards/card-verso.png`} alt="carta virada" />
         </div>
       </div>
     </div>

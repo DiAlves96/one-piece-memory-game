@@ -19,8 +19,14 @@ function Loading() {
     return (
         <div className="loading-page">
             <div className="loading-content">
-                <img src="/images/loading-luffy.gif" alt="loading luffy" />
-                <img src="/images/Loading-gr.gif" alt="loading" />
+                <img
+                    src={`${import.meta.env.BASE_URL}images/loading-luffy.gif`}
+                    alt="loading luffy"
+                />
+                <img
+                    src={`${import.meta.env.BASE_URL}images/Loading-gr.gif`}
+                    alt="loading"
+                />
             </div>
         </div>
     );

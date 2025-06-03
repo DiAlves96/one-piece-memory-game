@@ -22,7 +22,7 @@ function Board({ difficulty, setMoves, setPoints, onGameOver, moves, time, sound
     const totalPairs = generateDeck(difficulty).length / 2;
     if (matchedCards.length === totalPairs && totalPairs > 0) {
       setTimeout(() => {
-        playSound("/sounds/win.mp3", soundOn);
+        playSound(`${import.meta.env.BASE_URL}sounds/win.mp3`, soundOn);
         setShowEndGame(true);
         if (typeof onGameOver === "function") {
           onGameOver();
@@ -40,7 +40,7 @@ function Board({ difficulty, setMoves, setPoints, onGameOver, moves, time, sound
   const handleCardClick = (uuid, id) => {
     if (lockBoard || flippedCards.find(card => card.uuid === uuid) || matchedCards.includes(id)) return;
 
-    playSound("/sounds/flip.mp3", soundOn);
+    playSound(`${import.meta.env.BASE_URL}sounds/flip.mp3`, soundOn);
 
     const newFlipped = [...flippedCards, { uuid, id }];
     setFlippedCards(newFlipped);
@@ -54,9 +54,9 @@ function Board({ difficulty, setMoves, setPoints, onGameOver, moves, time, sound
         if (first.id === second.id) {
           setMatchedCards(prev => [...prev, first.id]);
           if (setPoints) setPoints(prev => prev + 1);
-          playSound("/sounds/match.mp3", soundOn);
+          playSound(`${import.meta.env.BASE_URL}sounds/match.mp3`, soundOn);
         } else {
-          playSound("/sounds/wismatch.mp3", soundOn);
+          playSound(`${import.meta.env.BASE_URL}sounds/wismatch.mp3`, soundOn);
         }
 
         setFlippedCards([]);

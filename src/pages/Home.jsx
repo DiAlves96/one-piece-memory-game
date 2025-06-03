@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <>
-      <BackgroundMusicManager src="/sounds/background-music.mp3" play={true} />
+      <BackgroundMusicManager src={`${import.meta.env.BASE_URL}sounds/background-music.mp3`}play={soundOn} />
 
       <video
         className="bg-video"
@@ -37,13 +37,20 @@ function Home() {
         key={isMobile ? "mobile" : "desktop"}
       >
         <source
-          src={isMobile ? "/videos/bg-mobile.mp4" : "/videos/bg-desktop.mp4"}
+          src={
+            isMobile
+              ? `${import.meta.env.BASE_URL}videos/bg-mobile.mp4`
+              : `${import.meta.env.BASE_URL}videos/bg-desktop.mp4`
+          }
           type="video/mp4"
         />
       </video>
 
       <div className="home-container">
-        <img src="/images/logo-home.png" alt="Logo One Piece" className="logo" />
+        <img
+          src={`${import.meta.env.BASE_URL}images/logo-home.png`}
+          alt="Logo One Piece"
+          className="logo" />
 
         <label htmlFor="player" className="label">Nome do Jogador</label>
         <input

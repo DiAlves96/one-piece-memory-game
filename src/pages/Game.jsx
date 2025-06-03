@@ -52,10 +52,10 @@ function Game() {
 
   return (
     <div className="game-page">
-      <BackgroundMusicManager src="/sounds/bg-game.mp3" play={!gameOver && soundOn} />
+      <BackgroundMusicManager src={`${import.meta.env.BASE_URL}sounds/bg-game.mp3`} play={!gameOver && soundOn} />
       <header className="game-header">
         <button className="icon-btn" onClick={() => navigate("/")}>
-          <img src="images/icons/home.svg" alt="Voltar" />
+          <img src={`${import.meta.env.BASE_URL}images/icons/home.svg`} alt="Voltar" />
         </button>
 
         <div className="game-timer">{formatTime(time)}</div>
@@ -63,7 +63,9 @@ function Game() {
         <button className="icon-btn" onClick={toggleSound}>
           <img
             src={
-              soundOn ? "images/icons/sound-on.png" : "images/icons/sound-off.png"
+              soundOn
+                ? `${import.meta.env.BASE_URL}images/icons/sound-on.png`
+                : `${import.meta.env.BASE_URL}images/icons/sound-off.png`
             }
             alt="Som"
           />
